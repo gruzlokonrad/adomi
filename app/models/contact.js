@@ -3,9 +3,9 @@ import mongoose, { Schema } from "mongoose";
 const contactSchema = new Schema({
   email: {
     type: String,
-    required: [true, "Email is required."],
+    required: [true, "E-mail jest wymagany."],
     trim: true,
-    match: [/^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/i, "Invalid email address"],
+    match: [/^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/i, "Niepoprawny adres e-mail"],
   },
 
   date: {

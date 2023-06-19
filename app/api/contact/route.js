@@ -12,7 +12,7 @@ export async function POST(req) {
     await Contact.create({ email })
 
     return NextResponse.json({
-      msg: ["Message sent succesfully"],
+      msg: ["Sukces! Więcej informacji otrzymasz na wskazany adres e-mail."],
       success: true
     })
   } catch (error) {
@@ -23,7 +23,7 @@ export async function POST(req) {
       }
       return NextResponse.json({ msg: errorList });
     } else {
-      return NextResponse.json({ msg: ["Unable to send message."] });
+      return NextResponse.json({ msg: ["Niestey, coś poszło nie tak."] });
     }
   }
 }
