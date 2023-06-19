@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import Container from '@/components/ui/container/container'
-import Input from '@/components/ui/input/input'
-import Button from '@/components/ui/button/button'
 import TextBrand from '@/components/ui/textBrand/textBrand'
+import EmailForm from '@/components/features/emailForm/emailForm'
 export default function Home() {
   return (
     <div className='h-full flex flex-col lg:flex-row'>
@@ -13,13 +12,14 @@ export default function Home() {
             alt="logo adomi"
             fill
             className='object-contain'
+            priority
           />
         </Container>
       </section>
-      <section className='flex-grow lg:flex lg:justify-center lg:w-full bg-red text-white'>
-        <Container className='flex flex-col justify-center max-w-2xl lg:max-w-md'>
+      <section className='flex-grow lg:flex lg:justify-center lg:w-full bg-red-adomi text-white-adomi'>
+        <Container className='flex flex-col justify-center max-w-2xl'>
           <p className='header-1'>
-            Strony internetowe dla małych firm.
+            Strona internetowa dla małych firm.
           </p>
           <div className='my-6'>
             <p>
@@ -34,29 +34,14 @@ export default function Home() {
             </ul>
             <TextBrand />
           </div>
-
           <div className='my-6'>
             <p>hello@adomi.site</p>
             <p>+48 513 950 004</p>
           </div>
-          
-          <div className='my-6'>
-            <p className='mb-2.5 lg:basis-full'>Chcesz wiedzieć więcej?</p>
-            <div className='lg:flex'>
-              <Input
-                placeholder='Wpisz adres email*'
-                name='email'
-                type='email'
-                outlined
-              />
-              <Button>Sprawdź</Button>
-            </div>
-          </div>
-
-          {/* <div className='my-6'>
-            <p>hello@adomi.site</p>
-            <p>+48 513 950 004</p>
-          </div> */}
+          <EmailForm
+            labelForm="Chcesz wiedzieć więcej?"
+            labelButton="Sprawdź"
+          />
         </Container>
       </section>
     </div>
