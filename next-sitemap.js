@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://adomi.site',
+  siteUrl: process.env.SITE_URL || 'https://adomi.site',
   priority: 0.7,
   sitemapSize: 5000,
   generateRobotsTxt: true,

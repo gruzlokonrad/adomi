@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        white: '#fdfdfd',
-        red: '#eb3f3f',
-        dark: '#272c5d',
+        "white-adomi": '#fdfdfd',
+        "red-adomi": '#eb3f3f',
+        "dark-adomi": '#272c5d',
       }
     },
     container: {
